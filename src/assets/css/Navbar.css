@@ -1,0 +1,159 @@
+/* Header styles */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px;
+  position: relative;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  width: 40px;
+  height: auto;
+}
+
+.header__logo-title {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+}
+
+.header__links {
+  list-style: none;
+  display: flex;
+}
+
+.header__link-wrapper {
+  margin-right: 25px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header__link:hover {
+  color: #ff5722;
+}
+
+.header__main-ham-menu-cont {
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.header__main-ham-menu,
+.header__main-ham-menu-close {
+  display: none;
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.header__sm-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  width: 100%;
+  height: 100vh;
+  padding-top: 15%;
+  text-align: center;
+  overflow-x: hidden;
+  transform: translateX(100%);
+  transition: all 0.75s ease-in-out;
+}
+.header__sm-menu-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.header__sm-menu-link{
+    padding: 10px 0;
+}
+.header__sm-menu-link a{
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.header__sm-menu-links .menu__icons img{
+    margin: 10px 15px;
+    width: 40px;
+    aspect-ratio: 1;
+}
+
+.header__sm-menu.show {
+    transform: translateX(0);
+  }
+
+.hide {
+  display: none;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 991px) {
+  .header__links {
+    display: none;
+  }
+
+  .header__sm-menu {
+    display: block;
+  }
+
+  .header__sm-menu-links {
+    list-style: none;
+  }
+
+  .header__sm-menu-link {
+    margin-bottom: 10px;
+  }
+
+  .header__main-ham-menu,
+  .header__main-ham-menu-close {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 655px){
+  .header__logo-img {
+    width: 30px;
+    height: auto;
+  }
+  
+  .header__logo-title {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+}

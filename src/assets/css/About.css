@@ -1,0 +1,119 @@
+.about {
+  width: 100%;
+  padding: 1.5rem 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.about__title {
+  margin-top: 2rem;
+}
+.about__title h2 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.about__desc-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about__description-left {
+  width: 60%;
+}
+.about__description p{
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+}
+
+.about__cta {
+  padding-top: 3rem;
+  margin-right: 1rem;
+}
+.about__cta img{
+    width: 18px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.about__cta a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.6rem 1.75rem;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.2rem;
+  transition: transform 0.2s ease;
+}
+
+.white_arrow{
+  margin-left: 10px !important;
+}
+
+.cta-secondary a{
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.about__description-right {
+  width: 40%;
+  margin-left: 1rem;
+}
+
+.about__image img {
+  width: 90%;
+  aspect-ratio: 1;
+}
+
+
+@media (max-width: 991px) {
+    .about {
+        padding: 1.5rem 2.5rem;
+      }
+    .about__description-left {
+        width: 100%;
+      }
+      .about__description-right{
+        display: none;
+      }
+      .about__title h2 {
+        margin-top: 0.5rem;
+        font-size: 1.75rem;
+      }
+      .about__description p{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 655px) {
+    .about {
+        padding: 1.25rem 1.25rem;
+      }
+    .about__title h2 {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .about__description p{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    .cta{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .about__cta {
+        padding-top: 2rem;
+        margin-right: 1rem;
+      }
+  }

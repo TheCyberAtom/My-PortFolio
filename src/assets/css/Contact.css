@@ -1,0 +1,128 @@
+/* Contact.css */
+.contact {
+  /* background-color: var(--white-color); */
+  padding: 50px 0;
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem 4rem;
+  text-align: center;
+  /* background-image: url(../img/hero_bg_main.jpeg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact__title {
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact__title h2 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact__form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.contact__form {
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.contact__form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form label {
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+  font-weight: 450;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #e3e9ee;
+  font-size: 1.125rem;
+}
+
+.contact__form textarea {
+  resize: vertical;
+}
+
+.submit__con {
+  width: 100%;
+  text-align: right;
+  margin: 0.75rem 0;
+  position: relative;
+}
+.submit__con span{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  color: green;
+}
+
+.contact__form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 2.75rem;
+  cursor: pointer;
+}
+
+.contact__form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 1.5rem 2.5rem;
+    height: auto;
+  }
+
+  .contact__title h2 {
+    margin-top: 0.5rem;
+    font-size: 1.75rem;
+  }
+  .contact__container {
+    padding: 0 10px;
+  }
+
+  .submit__con {
+    text-align: right;
+    margin: 0.5rem 0;
+  }
+}
+@media (max-width: 655px) {
+  .contact {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact__title h2 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+}

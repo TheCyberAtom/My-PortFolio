@@ -1,0 +1,69 @@
+/* ProjectCard.css */
+.project__card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.project__card:hover {
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.project__conatiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.project__card-image img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.4s; 
+}
+
+.project__card-content {
+  padding: 0.75rem;
+}
+
+.project__card-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--black-color);
+  text-shadow: none;
+}
+
+.project__card-content-desc{
+  margin: 0.75rem 0;
+}
+
+.project__card-links {
+  margin-top: 1.25rem;
+}
+
+.project__card-links a {
+  border: 1px solid var(--primary-color);
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project__card-links a:first-child {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.project__card-links a:last-child {
+  background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}

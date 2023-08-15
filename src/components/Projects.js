@@ -1,0 +1,64 @@
+import React from "react";
+import ProjectCard from "./ui/ProjectCard";
+import MarkdownProjectImg from "../assets/img/markdown_editor.png";
+import HeroProjectIng from "../assets/img/hero_bg.jpeg";
+import "../assets/css/Projects.css";
+
+const Projects = () => {
+  const ProjectsData = [
+    {
+      id: 1,
+      name: "MarkDown Previewer",
+      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
+      image: MarkdownProjectImg,
+      liveWebLink: "https://livemarkdowneditor.netlify.app",
+      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+      tags: [],
+    },
+    {
+      id: 2,
+      name: "MarkDown Previewer",
+      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
+      image: HeroProjectIng,
+      liveWebLink: "https://livemarkdowneditor.netlify.app",
+      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+      tags: [],
+    },
+    {
+      id: 3,
+      name: "MarkDown Previewer",
+      description: "A website that offers a user-friendly interface for creating and editing Markdown.A website that offers.",
+      image: MarkdownProjectImg,
+      liveWebLink: "https://livemarkdowneditor.netlify.app",
+      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+      tags: [],
+    },
+    {
+      id: 4,
+      name: "MarkDown Previewer",
+      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
+      image: MarkdownProjectImg,
+      liveWebLink: "https://livemarkdowneditor.netlify.app",
+      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+      tags: [],
+    },
+  ];
+
+  return (
+    <div className="projects">
+      <div className="projects__container">
+        <div className="projects__title">
+            <span>PROJECTS</span>
+            <h2>Code-Powered Designs in Action</h2>
+        </div>
+        <div className="projects__lists">
+            {ProjectsData.map((project) => (
+                <ProjectCard key={project.id} project={project}/>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
