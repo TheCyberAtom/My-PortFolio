@@ -20,14 +20,12 @@ const About = () => {
                 passionate about creating engaging and intuitive websites
                 through front end development. With over 2 years of experience
                 working with React and Angular, I have developed a deep
-                understanding of these technologies and their best practices. As
-                a motivated individual, I am always eager to learn new skills
-                and stay up-to-date with the latest trends in front end
-                development. I take pride in delivering high-quality code and
-                collaborating with cross-functional teams to achieve project
-                success. Always looking for new opportunities to apply my
-                expertise and contribute to innovative projects in the field of
-                front end development.
+                understanding of these technologies and their best practices. I
+                take pride in delivering high-quality code and collaborating
+                with cross-functional teams to achieve project success. Always
+                looking for new opportunities to apply my expertise and
+                contribute to innovative projects in the field of front end
+                development.
               </p>
               <br></br>
               <p>

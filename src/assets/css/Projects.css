@@ -4,6 +4,11 @@
     text-align: center;
     margin-bottom: 1rem;
     background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+  }
+  .projects__container{
+    max-width: 1600px;
   }
   
   .projects__title {
@@ -20,6 +25,12 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1601px){
+    .projects__lists{
+      gap: 2.5rem;
+    }
   }
 
   @media (max-width: 991px){

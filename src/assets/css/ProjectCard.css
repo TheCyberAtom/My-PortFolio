@@ -67,3 +67,10 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
+
+@media (min-width: 1601px){
+  .project__card {
+    max-width: 520px;
+    
+  }
+}
