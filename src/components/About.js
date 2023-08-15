@@ -1,7 +1,7 @@
 import React from "react";
 import AboutImage from "../assets/img/about.jpg";
 import ArrowIcon from "../assets/img/right_arrow.png";
-import DownloadIcon from "../assets/img/direct-download.png";
+import DownloadIcon from "../assets/img/download.png";
 import "../assets/css/About.css";
 
 const About = () => {

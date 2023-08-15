@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import BlackLogo from "../assets/img/logo_black.svg";
 import MenuOpen from "../assets/img/menu.png";
 import MenuClose from "../assets/img/close.png";
@@ -28,24 +29,24 @@ const Navbar = () => {
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <a href="./" className="header__link">
+              <Link to="home" className="header__link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="header__link-wrapper">
-              <a href="./" className="header__link">
+              <Link to="about" smooth={true} className="header__link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="header__link-wrapper">
-              <a href="./" className="header__link">
+              <Link to="projects" smooth={true} className="header__link">
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="header__link-wrapper">
-              <a href="./" className="header__link">
+              <Link to="contact" smooth={true} className="header__link">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="header__main-ham-menu-cont" onClick={toggleMenu}>

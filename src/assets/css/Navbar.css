@@ -3,7 +3,8 @@
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
   padding: 15px;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .header__content {
@@ -12,6 +13,7 @@
   justify-content: space-between;
   /* max-width: 1200px; */
   margin: 0 auto;
+  position: relative;
 }
 
 .header__logo-container {

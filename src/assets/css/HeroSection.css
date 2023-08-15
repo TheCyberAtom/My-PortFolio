@@ -2,7 +2,7 @@
   width: 100%;
   height: calc(100vh - 74.5px);
   background-color: var(--white-color);
-  background: url(../img/hero_bg_main2.jpg);
+  background: url(../img/hero_bg_2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +60,7 @@
 @media (max-width: 991px) {
   .hero {
     height: calc(100vh - 74.5px);
-    background-image: url(../img/hero_bg_main2.jpg);
+    background-image: url(../img/hero_bg_2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
