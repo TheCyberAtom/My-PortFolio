@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import ProjectCard from "./ui/ProjectCard";
 import MarkdownProjectImg from "../assets/img/markdown_editor.png";
 import HeroProjectIng from "../assets/img/hero_bg.jpeg";
@@ -55,6 +56,11 @@ const Projects = () => {
             {ProjectsData.map((project) => (
                 <ProjectCard key={project.id} project={project}/>
             ))}
+        </div>
+        <div className="projects__cta">
+          <Link to="contact" smooth={true} type="button">
+            View All Projects
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 .footer{
-    background-color: var(--black-color);
+    width: 100%;
+    background-color: #191919;
     padding: 2rem 4rem;
 }
 .footer__container{
@@ -11,40 +12,39 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
     border-bottom: 1px solid grey;
 }
+.footer__info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__contact{
+    width: 50%;
+}
 
-.footer__left h2, .footer__right h2 {
+.footer__info h2{
     font-size: 1.5rem;
     color: #dcdbdb;
     font-family: 'Poppins', sans-serif;
 }
 
-.footer__left{
-    width: 50%;
+.social__link{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
 }
-.footer__left p{
-    color: white;
-    margin-top: 0.5rem;
-}
-
-.footer__right{
-    width: 20%;
-}
-
-.footer_right-link{
-    padding: 10px 0;
-}
-.footer_right-link a{
+.social__link a{
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
     margin-right: 10px;
     cursor: pointer;
 }
-.footer_right-link a img{
-    width: 30px;
+.social__link a img{
+    width: 40px;
     aspect-ratio: 1;
 }
 
@@ -53,11 +53,11 @@
     margin-top: 1rem;
 }
 .footer_copyright span{
-    color: var(--white-color);
+    color: #f5f5f5;
 }
 
 .footer_copyright a{
-    color: var(--white-color);
+    color: #f5f5f5;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -69,13 +69,12 @@
     .footer__main{
         flex-direction: column;
     }
-    .footer__left, .footer__right{
+    .footer__info, .footer__contact{
         width: 100%;
     }
-    .footer__right h2{
-        margin-top: 1.5rem;
+    .social__link a img{
+        width:30px;
     }
-    
 }
 
 @media (max-width: 655px){
@@ -85,13 +84,119 @@
     .footer_copyright span{
         font-size: 0.8rem;
     }
-    .footer__left h2, .footer__right h2{
-        font-size: 1.25rem;
-    }
-    p{
-        font-size: 0.9rem;
-    }
-    .footer_right-link a img{
+    .social__link a img{
         width:25px;
     }
+}
+
+/*  TEXT ANIMATION  */
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+.wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper span {
+  -webkit-text-stroke-width: 1.25px;
+  -webkit-text-stroke-color: #000;
+  font-size: 45px;
+  text-shadow: 0 0px var(--black-color);
+  transform: translate(0, 100%) rotate(4deg);
+  animation: jump 4s ease-in-out infinite;
+  display: inline-block;
+  font-family: "Titan One", cursive;
+  color: #fff;
+}
+
+.wrapper span:nth-child(1) {
+  animation-delay: 100ms;
+}
+.wrapper span:nth-child(2) {
+  animation-delay: 200ms;
+}
+.wrapper span:nth-child(3) {
+  animation-delay: 300ms;
+}
+.wrapper span:nth-child(4) {
+  animation-delay: 400ms;
+}
+.wrapper span:nth-child(5) {
+  animation-delay: 500ms;
+}
+.wrapper span:nth-child(6) {
+  animation-delay: 600ms;
+}
+.wrapper span:nth-child(7) {
+  animation-delay: 700ms;
+}
+.wrapper span:nth-child(8) {
+  animation-delay: 800ms;
+}
+.wrapper span:nth-child(9) {
+  animation-delay: 900ms;
+}
+.wrapper span:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.wrapper span:nth-child(11) {
+  animation-delay: 1100ms;
+}
+.wrapper span:nth-child(12) {
+  animation-delay: 1200ms;
+}
+.wrapper span:nth-child(13) {
+  animation-delay: 1300ms;
+}
+.wrapper span:nth-child(14) {
+  animation-delay: 1400ms;
+}
+.wrapper span:nth-child(15) {
+  animation-delay: 1500ms;
+}
+.wrapper span:nth-child(16) {
+  animation-delay: 1600ms;
+}
+.wrapper span:nth-child(17) {
+  animation-delay: 1700ms;
+}
+.wrapper span:nth-child(18) {
+  animation-delay: 1800ms;
+}
+.wrapper span:nth-child(19) {
+  animation-delay: 1900ms;
+}
+.wrapper span:nth-child(20) {
+  animation-delay: 2000ms;
+}
+
+@keyframes jump {
+  33% {
+    text-shadow: 0 15px #372f4a;
+  }
+  50% {
+    transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #573e92;
+  }
+  66.67% {
+    text-shadow: 0 -15px #7037F8;
+  }
+}
+
+
+@media (min-width: 1601px){
+  .wrapper span {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper span {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 655px) {
+  .wrapper span {
+    font-size: 22.5px;
+  }
 }

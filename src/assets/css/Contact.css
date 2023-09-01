@@ -1,15 +1,8 @@
-/* Contact.css */
 .contact {
-  /* background-color: var(--white-color); */
   padding: 50px 0;
-  width: 100%;
   height: auto;
-  padding: 1.5rem 4rem;
-  text-align: center;
-  /* background-image: url(../img/hero_bg_main.jpeg); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 0.5rem;
+  text-align: left;
 }
 
 .contact__container {
@@ -19,27 +12,25 @@
 }
 
 .contact__title {
-  margin-top: 2rem;
-  text-align: center;
+  margin-top: 0.125rem;
+  text-align: left;
 }
-.contact__title h2 {
+.contact__title p {
   margin-top: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f5f5f5;
 }
 
 .contact__form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .contact__form {
-  max-width: 600px;
   width: 100%;
   text-align: left;
 }
@@ -49,21 +40,34 @@
   flex-direction: column;
 }
 
+.name__email{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.name, .email, .textarea{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .contact__form label {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-bottom: 5px;
   margin-top: 1rem;
   font-weight: 450;
+  color: #f5f5f5;
 }
 
 .contact__form input,
 .contact__form textarea {
-  padding: 10px;
+  padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #e3e9ee;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .contact__form textarea {
@@ -72,14 +76,14 @@
 
 .submit__con {
   width: 100%;
-  text-align: right;
+  text-align: left;
   margin: 0.75rem 0;
   position: relative;
 }
 .submit__con span{
   position: absolute;
-  top: 15px;
-  left: 0;
+  top: 10px;
+  right: 0;
   color: green;
 }
 
@@ -88,7 +92,7 @@
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 0.75rem 2.75rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
 }
 
@@ -99,30 +103,29 @@
 
 @media (max-width: 991px) {
   .contact {
-    padding: 1.5rem 2.5rem;
+    padding: 0.25rem;
     height: auto;
   }
-
-  .contact__title h2 {
-    margin-top: 0.5rem;
-    font-size: 1.75rem;
-  }
   .contact__container {
-    padding: 0 10px;
+    padding: 0 5px;
   }
-
+  .contact__form label {
+    margin-top: 0.75rem;
+  }
+  .name__email{
+    flex-direction: column;
+    gap: 0rem;
+  }
   .submit__con {
-    text-align: right;
+    text-align: left;
     margin: 0.5rem 0;
   }
 }
 @media (max-width: 655px) {
   .contact {
-    padding: 1.5rem 1rem;
+    padding: 0.125;
   }
-
-  .contact__title h2 {
+  .contact__form label {
     margin-top: 0.5rem;
-    font-size: 1.5rem;
   }
 }

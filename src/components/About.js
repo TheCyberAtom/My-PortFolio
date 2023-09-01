@@ -1,7 +1,5 @@
 import React from "react";
-import AboutImage from "../assets/img/about.jpg";
-import ArrowIcon from "../assets/img/right_arrow.png";
-import DownloadIcon from "../assets/img/download.png";
+import HeroImg from "../assets/img/hero_image.png";
 import "../assets/css/About.css";
 
 const About = () => {
@@ -37,25 +35,18 @@ const About = () => {
             </div>
             <div className="cta">
               <div className="about__cta">
-                <a href="/">
-                  Read More{" "}
-                  <img
-                    className="white_arrow"
-                    src={ArrowIcon}
-                    alt="arrow icon"
-                  />{" "}
-                </a>
+                <a href="/">Read More. . .</a>
               </div>
               <div className="about__cta cta-secondary">
                 <a href="/">
-                  My Resume <img src={DownloadIcon} alt="download icon" />{" "}
+                  View Resume
                 </a>
               </div>
             </div>
           </div>
           <div className="about__description-right">
             <div className="about__image">
-              <img src={AboutImage} alt="About Me svg" />
+              <img src={HeroImg} alt="My Profile Pic" />
             </div>
           </div>
         </div>

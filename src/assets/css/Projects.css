@@ -1,8 +1,7 @@
 .projects {
     width: 100%;
     padding: 1.5rem 4rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align: left;
     background-color: var(--white-color);
     display: flex;
     justify-content: center;
@@ -13,10 +12,13 @@
   
   .projects__title {
     margin-top: 2rem;
-    text-align: center;
+    text-align: left;
+  }
+  .projects__title span{
+    color: var(--primary-color);
   }
   .projects__title h2 {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     font-size: 2rem;
   }
 
@@ -26,6 +28,29 @@
     gap: 1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+
+.projects__cta {
+  padding-top: 2.75rem;
+  padding-left: 0.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects__cta a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.6rem 5rem;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 0.2rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.projects__cta a:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
 
   @media (min-width: 1601px){
     .projects__lists{

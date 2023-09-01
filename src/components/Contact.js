@@ -48,37 +48,44 @@ const Contact = () => {
     <div className="contact">
       <div className="contact__container">
         <div className="contact__title">
-          <span>CONTACT</span>
-          <h2>Let's Code Your Vision Together!</h2>
+          <p>Let's Code Your Vision Together!</p>
         </div>
         <div className="contact__form-container">
           <div className="contact__form">
             <form onSubmit={submitForm}>
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              <div className="name__email">
+                <div className="name">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div className="email">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="textarea">
               <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="25"
-                rows="6"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="2"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+              </div>
               <div className="submit__con">
                 {emailSent ? <span>Email Sent !</span> : "" }
                 <input type="submit" />

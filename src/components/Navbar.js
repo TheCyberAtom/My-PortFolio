@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import BlackLogo from "../assets/img/logo_black.svg";
+import { useTheme } from "../ThemeContext";
 import MenuOpen from "../assets/img/menu.png";
 import MenuClose from "../assets/img/close.png";
+import BlackLogo from "../assets/img/logo_black.svg";
 import GithubIcon from "../assets/img/github_black.svg";
 import LinkedinIcon from "../assets/img/linkedin_black.svg";
 import "../assets/css/Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { toggleTheme } = useTheme();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -29,7 +31,7 @@ const Navbar = () => {
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <Link to="home" className="header__link">
+              <Link to="home" smooth={true} className="header__link">
                 Home
               </Link>
             </li>
@@ -48,6 +50,7 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <button onClick={toggleTheme}>Toggle Theme</button>
           </ul>
           <div className="header__main-ham-menu-cont" onClick={toggleMenu}>
             <img
@@ -69,22 +72,38 @@ const Navbar = () => {
         <div className="header__sm-menu-content">
           <ul className="header__sm-menu-links">
             <li className="header__sm-menu-link">
-              <a href="./">Home</a>
+              <Link to="home" smooth={true} className="header__link">
+                Home
+              </Link>
             </li>
             <li className="header__sm-menu-link">
-              <a href="./">About</a>
+              <Link to="about" smooth={true} className="header__link">
+                About
+              </Link>
             </li>
             <li className="header__sm-menu-link">
-              <a href="./">Projects</a>
+              <Link to="projects" smooth={true} className="header__link">
+                Projects
+              </Link>
             </li>
             <li className="header__sm-menu-link">
-              <a href="./">Contact</a>
+              <Link to="contact" smooth={true} className="header__link">
+                Contact
+              </Link>
             </li>
             <li className="header__sm-menu-link menu__icons">
-              <a href="https://www.linkedin.com/in/thecyberatom/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/thecyberatom/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={LinkedinIcon} alt="Linkedin Icon" />
               </a>
-              <a href="https://github.com/TheCyberAtom" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/TheCyberAtom"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={GithubIcon} alt="Github Icon" />
               </a>
             </li>

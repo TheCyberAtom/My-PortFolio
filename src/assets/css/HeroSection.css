@@ -1,79 +1,141 @@
 .hero {
   width: 100%;
-  height: calc(100vh - 74.5px);
-  background-color: var(--white-color);
-  background: url(../img/hero_bg_2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: overlay;
+  height: calc(100vh);
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .hero__container {
+  max-width: 1600px;
   width: inherit;
   height: inherit;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  padding-left: 4rem;
+}
+
+.hero__social{
+  display: flex;
+  align-items: center;
+}
+.socials__link{
+  padding: 1rem;
   text-align: center;
+  position: relative;
+}
+.socials__link a{
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px 5px;
+  cursor: pointer;
+}
+.socials__link a img{
+  width: 40px;
+  aspect-ratio: 1;
+}
+.socials__link::before{
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 48.5%;
+  height: 100%;
+  width: 1px;
+  background-color: var(--primary-color);
+}
+.socials__link::after{
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 48.5%;
+  height: 100%;
+  width: 1px;
+  background-color: var(--primary-color);
+}
+
+.hero__sub {
+  display: flex;
+  align-items: flex-end;
+}
+.hero__sub img {
+  width: 3rem;
+}
+.hero__sub h3 {
+  padding: 0.3rem;
+  vertical-align: middle;
+  word-spacing: 0.125rem;
+}
+.hero__sub h3 span {
+  color: var(--primary-color);
 }
 
 .hero__title {
-  margin-top: -7.5%;
+  margin-top: -1%;
   font-size: 2.5rem;
 }
-.hero__title h1{
-  text-shadow: 2px 7px 5px rgba(0,0,0,0.2), 
-  0px -4px 10px rgba(255, 255, 255, 0.2);
+.hero__title h1 {
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2),
+    0px -4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .hero__description {
-  padding: 0.5rem 10rem;
-  font-size: 1.3rem;
+  width: 75%;
+  padding-left: 0.3rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 2rem;
 }
+.hero__description p{
+  color: var(--black-color);
+}
 
 .hero__cta {
-  padding-top: 3rem;
+  padding-top: 2.75rem;
+  padding-left: 0.3rem;
 }
 
 .hero__cta a {
   font-size: 1.25rem;
   font-weight: 500;
   padding: 0.8rem 1.8rem;
-  background-color: #7037F8;
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.2rem;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
-@media (min-width: 1601px){
-  .hero{
+@media (min-width: 1601px) {
+  .hero {
     height: 50vh;
+  }
+  .socials__link{
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (max-width: 991px) {
   .hero {
-    height: calc(100vh - 74.5px);
-    background-image: url(../img/hero_bg_2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__container{
+    padding-left: 2.25rem;
   }
 
   .hero__title {
     font-size: 2rem;
-    margin-top: -6%;
+    margin-top: -1%;
   }
 
   .hero__description {
-    padding: 0.5rem 1rem;
+    width: 90%;
+    padding: 0.5rem;
     font-size: 1.15rem;
     line-height: 1.8rem;
   }
@@ -86,11 +148,44 @@
     font-size: 1rem;
     padding: 0.5rem 1.25rem;
   }
+
+  .hero__social{
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .socials__link::before{
+    top: 49%;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+  }
+  .socials__link::after{
+    top: 49%;
+    left: 100%;
+    width: 100%;
+    height: 1px;
+  }
+  .linkedin{
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 655px) {
-  .hero {
-    height: calc(100vh - 64.5px);
+
+  .hero__container{
+    padding-left: 1rem;
+  }
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  .hero__sub{
+    margin-bottom: 1.25rem;
+  }
+  .hero__sub h3 {
+    padding: 0.3rem;
+    font-size: 1rem;
+    word-spacing: 0rem;
   }
   .hero__title {
     line-height: 4rem;
@@ -98,8 +193,18 @@
     margin-top: -5%;
   }
   .hero__description {
-    padding: 0.5rem 1rem;
+    width: 97.5%;
+    padding: 0.25rem;
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .socials__link::before{
+    left: -50%;
+    width: 50%;
+  }
+  .socials__link::after{
+    right: 50%;
+    width: 50%;
   }
 }

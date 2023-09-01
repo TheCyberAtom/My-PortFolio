@@ -1,8 +1,7 @@
-/* Header styles */
 .header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 15px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--off-white);
+  padding: 10px 15px;
   position: fixed;
   width: 100%;
 }
@@ -11,7 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* max-width: 1200px; */
   margin: 0 auto;
   position: relative;
 }
@@ -27,10 +25,11 @@
 }
 
 .header__logo-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-left: 15px;
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--black-color);
 }
 
 .header__main {
@@ -49,14 +48,14 @@
 
 .header__link {
   text-decoration: none;
-  color: #333333;
+  color: var(--off-black);
   font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .header__link:hover {
-  color: #ff5722;
+  color: var(--primary-color);
 }
 
 .header__main-ham-menu-cont {
@@ -78,7 +77,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #FFF;
+  background-color: var(--white-color);
   width: 100%;
   height: 100vh;
   padding-top: 15%;
@@ -88,30 +87,30 @@
   transition: all 0.75s ease-in-out;
 }
 .header__sm-menu-links {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
-.header__sm-menu-link{
-    padding: 10px 0;
+.header__sm-menu-link {
+  padding: 10px 0;
 }
-.header__sm-menu-link a{
-    font-size: 1.5em;
-    font-weight: bold;
-    letter-spacing: 1px;
+.header__sm-menu-link a {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
-.header__sm-menu-links .menu__icons img{
-    margin: 10px 15px;
-    width: 40px;
-    aspect-ratio: 1;
+.header__sm-menu-links .menu__icons img {
+  margin: 10px 15px;
+  width: 40px;
+  aspect-ratio: 1;
 }
 
 .header__sm-menu.show {
-    transform: translateX(0);
-  }
+  transform: translateX(0);
+}
 
 .hide {
   display: none;
@@ -145,17 +144,16 @@
   }
 }
 
-@media (max-width: 655px){
+@media (max-width: 655px) {
   .header__logo-img {
     width: 30px;
     height: auto;
   }
-  
+
   .header__logo-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-left: 15px;
     font-size: 1.25rem;
     font-weight: bold;
   }
-  
 }

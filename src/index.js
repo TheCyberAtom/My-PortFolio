@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
+import reportWebVitals from './reportWebVitals';
 import CaseStudy from "./pages/CaseStudy";
+import ReactDOM from 'react-dom/client';
 import Error from "./pages/Error";
+import Home from "./pages/Home";
+import App from './App';
 import './index.css';
 
 const appRouter = createBrowserRouter([
