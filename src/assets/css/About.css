@@ -4,7 +4,7 @@
   text-align: left;
   display: flex;
   justify-content: center;
-  background-color: var(--white-color);
+  background-color: var(--background-color-2);
 }
 
 .about__container {
@@ -36,7 +36,7 @@
   font-size: 1.125rem;
   line-height: 1.6rem;
   text-align: justify;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 
 .cta {

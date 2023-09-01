@@ -2,7 +2,7 @@
     width: 100%;
     padding: 1.5rem 4rem;
     text-align: left;
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
   }

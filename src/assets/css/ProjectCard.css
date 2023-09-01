@@ -34,13 +34,14 @@
 .project__card-content h3 {
   margin-top: 0;
   font-size: 1.25rem;
-  color: var(--black-color);
+  color: var(--text-color);
   text-shadow: none;
 }
 
 .project__card-content-desc {
   margin: 0.75rem 0;
-  color: var(--off-black);
+  color: var(--text-color);
+  opacity: 0.9;
 }
 
 .project__card-links {

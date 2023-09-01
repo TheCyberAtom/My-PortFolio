@@ -4,13 +4,14 @@ import { useTheme } from "../ThemeContext";
 import MenuOpen from "../assets/img/menu.png";
 import MenuClose from "../assets/img/close.png";
 import BlackLogo from "../assets/img/logo_black.svg";
+import WhiteLogo from "../assets/img/logo_white.svg";
 import GithubIcon from "../assets/img/github_black.svg";
 import LinkedinIcon from "../assets/img/linkedin_black.svg";
 import "../assets/css/Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -21,7 +22,7 @@ const Navbar = () => {
         <div className="header__logo-container">
           <div className="header__logo-img-cont">
             <img
-              src={BlackLogo}
+              src={theme === 'light' ? BlackLogo : WhiteLogo}
               alt="Rahul Mishra Logo"
               className="header__logo-img"
             />

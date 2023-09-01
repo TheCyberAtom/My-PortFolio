@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   height: calc(100vh);
-  background-color: var(--off-white);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -89,7 +89,7 @@
   line-height: 2rem;
 }
 .hero__description p{
-  color: var(--black-color);
+  color: var(--text-color);
 }
 
 .hero__cta {

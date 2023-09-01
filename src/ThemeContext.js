@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
     setDarkMode(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+    // localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
   // Initialize the theme from local storage (or use a default)
@@ -27,13 +27,13 @@ export const ThemeProvider = ({ children }) => {
   // 24ad99 - good-color
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty('--primary-color', isDarkMode ? '#5427C3' : '#7037F8');
-    root.style.setProperty('--secondary-color', isDarkMode ? '#d7f5f1' : '#2F4C49');
-    root.style.setProperty('--white-color', isDarkMode ? '#0E0E0E' : '#F5F5F5');
-    root.style.setProperty('--off-white', isDarkMode ? '#333333' : '#D5D5D5');
-    root.style.setProperty('--black-color', isDarkMode ? '#F5F5F5' : '#191919');
-    root.style.setProperty('--off-black', isDarkMode ? '#D5D5D5' : '#111111');
-  }, [isDarkMode]);
+    root.style.setProperty('--primary-color', isDarkMode ? '#2E3AA1' : '#4285F4');
+    root.style.setProperty('--secondary-color', isDarkMode ? '#F7F7F7' : '#141824');
+    root.style.setProperty('--background-color', isDarkMode ? '#0E0E0E' : '#FFFFFF');
+    root.style.setProperty('--background-color-2', isDarkMode ? '#151515' : '#EFEFEF');
+    root.style.setProperty('--text-color', isDarkMode ? '#F5F5F5' : '#333333');
+}, [isDarkMode]);
+
 
   const theme = isDarkMode ? 'dark' : 'light';
 
