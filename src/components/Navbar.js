@@ -7,10 +7,12 @@ import moon from "../assets/img/half-moon.png";
 import MenuClose from "../assets/img/close.png";
 import WhiteLogo from "../assets/img/logo_white.svg";
 import BlackLogo from "../assets/img/logo_black.svg";
-import GithubIcon from "../assets/img/github_black.svg";
+import GithubIcon from "../assets/img/github.svg";
 import MenuOpenWhite from "../assets/img/white_menu.png";
 import MenuCloseWhite from "../assets/img/close_white.png";
-import LinkedinIcon from "../assets/img/linkedin_black.svg";
+import LinkedinIcon from "../assets/img/linkedin.svg";
+import LinkedinIconBlack from "../assets/img/linkedin_black.svg";
+import GithubIconBlack from "../assets/img/github_black.svg";
 
 import "../assets/css/Navbar.css";
 
@@ -20,6 +22,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  if (isMenuOpen) {
+    document.body.classList.add('menu-open');
+  } else {
+    document.body.classList.remove('menu-open');
+  }
 
   return (
     <header className="header">
@@ -116,14 +123,14 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={LinkedinIcon} alt="Linkedin Icon" />
+                <img src={theme === 'light' ? LinkedinIconBlack : LinkedinIcon} alt="Linkedin Icon" />
               </a>
               <a
                 href="https://github.com/TheCyberAtom"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={GithubIcon} alt="Github Icon" />
+                <img src={theme === 'light' ? GithubIconBlack : GithubIcon} alt="Github Icon" />
               </a>
             </li>
           </ul>

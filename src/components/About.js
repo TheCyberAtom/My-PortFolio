@@ -34,7 +34,7 @@ const About = () => {
               </p>
             </div>
             <div className="cta">
-              <div className="about__cta">
+              <div className="about__cta primary">
                 <a href="/">Read More. . .</a>
               </div>
               <div className="about__cta cta-secondary">

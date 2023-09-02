@@ -48,13 +48,6 @@
   padding-top: 3rem;
   margin-right: 1rem;
 }
-.about__cta img {
-  width: 18px;
-  vertical-align: middle;
-  margin-left: 5px;
-  padding: 1rem;
-}
-
 .about__cta a {
   font-size: 1.125rem;
   font-weight: 500;
@@ -71,9 +64,18 @@
 }
 
 .cta-secondary a {
-  background-color: var(--white-color);
+  background-color: var(--background-color-2);
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
+}
+
+.primary a:hover{
+  background-color: var(--button-hover);
+  border: 2.5px solid var(--button-hover);
+}
+.cta-secondary a:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .about__description-right {

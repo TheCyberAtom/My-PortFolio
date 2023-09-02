@@ -6,12 +6,9 @@
 }
 
 :root {
-  --primary-color: #7037F8;
-  --secondary-color: #2F4C49;
   --white-color: #f5f5f5;
   --black-color: #191919;
-  --light-grey: #bcbcbc;
-  --dark-grey: #656565;
+  --button-hover: #3570ce;
 }
 
 html {
