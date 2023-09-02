@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { useTheme } from "../ThemeContext";
+import sun from "../assets/img/sun.png";
 import MenuOpen from "../assets/img/menu.png";
+import moon from "../assets/img/half-moon.png";
 import MenuClose from "../assets/img/close.png";
-import BlackLogo from "../assets/img/logo_black.svg";
 import WhiteLogo from "../assets/img/logo_white.svg";
+import BlackLogo from "../assets/img/logo_black.svg";
 import GithubIcon from "../assets/img/github_black.svg";
+import MenuOpenWhite from "../assets/img/white_menu.png";
+import MenuCloseWhite from "../assets/img/close_white.png";
 import LinkedinIcon from "../assets/img/linkedin_black.svg";
+
 import "../assets/css/Navbar.css";
 
 const Navbar = () => {
@@ -22,7 +27,7 @@ const Navbar = () => {
         <div className="header__logo-container">
           <div className="header__logo-img-cont">
             <img
-              src={theme === 'light' ? BlackLogo : WhiteLogo}
+              src={theme === "light" ? BlackLogo : WhiteLogo}
               alt="Rahul Mishra Logo"
               className="header__logo-img"
             />
@@ -51,21 +56,34 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <button onClick={toggleTheme}>Toggle Theme</button>
           </ul>
           <div className="header__main-ham-menu-cont" onClick={toggleMenu}>
             <img
-              src={MenuOpen}
+              src={theme === "dark" ? MenuOpenWhite : MenuOpen}
               alt="hamburger menu"
               className={`header__main-ham-menu ${isMenuOpen ? "hide" : ""}`}
             />
             <img
-              src={MenuClose}
+              src={theme === "dark" ? MenuCloseWhite : MenuClose}
               alt="hamburger menu close"
               className={`header__main-ham-menu-close ${
                 isMenuOpen ? "" : "hide"
               }`}
             />
+          </div>
+          <div className="theme__toggle">
+            <input
+              type="checkbox"
+              className="checkbox"
+              id="checkbox"
+              onChange={toggleTheme}
+              checked={theme === 'light'}
+            />
+            <label for="checkbox" className="checkbox-label">
+              <img src={sun} className="sun" alt="sun" />
+              <img src={moon} className="moon" alt="moon" />
+              <span class="ball"></span>
+            </label>
           </div>
         </div>
       </div>

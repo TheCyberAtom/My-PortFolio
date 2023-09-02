@@ -6,13 +6,13 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   // Toggle the theme and store it in local storage
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
     setDarkMode(newTheme);
-    // localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
   // Initialize the theme from local storage (or use a default)

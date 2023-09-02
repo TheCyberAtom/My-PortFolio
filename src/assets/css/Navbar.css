@@ -118,6 +118,11 @@
 
 /* Media queries for responsive design */
 @media (max-width: 991px) {
+  .header__main{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   .header__links {
     display: none;
   }
@@ -142,6 +147,10 @@
   .hide {
     display: none;
   }
+
+  .theme__toggle{
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 655px) {
@@ -156,4 +165,51 @@
     font-size: 1.25rem;
     font-weight: bold;
   }
+}
+@media (max-width: 456px) {
+  .header__logo-title {
+    display: none;
+  }
+}
+
+/* Theme Toggle Styling */
+.theme__toggle{
+  position: relative;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #888888;
+  width: 50px;
+  height: 24px;
+  border-radius: 45px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label img{
+  width: 17px;
+  aspect-ratio: 1;
+}
+
+.checkbox-label .ball {
+  background-color: var(--background-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(26px);
 }
