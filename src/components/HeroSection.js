@@ -33,7 +33,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="hero__cta">
-          <Link to="contact" smooth={true} type="button">
+          <Link to="contact" spy={true} smooth={true} duration={100} type="button">
             Contact Me
           </Link>
         </div>

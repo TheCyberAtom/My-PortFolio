@@ -3,6 +3,17 @@ import HeroImg from "../assets/img/hero_image.png";
 import "../assets/css/About.css";
 
 const About = () => {
+  // const handleDownload = () => {
+  //   // Generate the URL for your resume file
+  //   const resumeUrl = process.env.PUBLIC_URL + "/resume.pdf";
+
+  //   const link = document.createElement("a");
+  //   link.href = resumeUrl;
+  //   link.target = "_blank";
+  //   link.download = "your-resume.pdf";
+  //   link.click();
+  // };
+
   return (
     <div className="about">
       <div className="about__container">
@@ -38,7 +49,7 @@ const About = () => {
                 <a href="/">Read More. . .</a>
               </div>
               <div className="about__cta cta-secondary">
-                <a href="/">
+                <a href="/resume.pdf" download="resume.pdf">
                   View Resume
                 </a>
               </div>

@@ -1,22 +1,29 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
-// import Skills from '../components/Skills';
+import { Element } from 'react-scroll';
 
 const Home = () => {
   return (
     <>
-    <Navbar />
-    <HeroSection to="home" />
-    <About to="about" />
-    <Projects to="projects" />
-    <Footer to="contact" />
-    {/* <Skills /> */}
+      <Navbar />
+      <Element name="home">
+        <HeroSection />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="projects">
+        <Projects />
+      </Element>
+      <Element name="contact">
+        <Footer />
+      </Element>
     </>
-  )
-}
+  );
+};
 
 export default Home;

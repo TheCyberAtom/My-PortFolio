@@ -23,9 +23,9 @@ const Navbar = () => {
     setMenuOpen(!isMenuOpen);
   };
   if (isMenuOpen) {
-    document.body.classList.add('menu-open');
+    document.body.classList.add("menu-open");
   } else {
-    document.body.classList.remove('menu-open');
+    document.body.classList.remove("menu-open");
   }
 
   return (
@@ -44,22 +44,46 @@ const Navbar = () => {
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <Link to="home" smooth={true} className="header__link">
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={100}
+                className="header__link"
+              >
                 Home
               </Link>
             </li>
             <li className="header__link-wrapper">
-              <Link to="about" smooth={true} className="header__link">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={100}
+                className="header__link"
+              >
                 About
               </Link>
             </li>
             <li className="header__link-wrapper">
-              <Link to="projects" smooth={true} className="header__link">
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={100}
+                className="header__link"
+              >
                 Projects
               </Link>
             </li>
             <li className="header__link-wrapper">
-              <Link to="contact" smooth={true} className="header__link">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={100}
+                className="header__link"
+              >
                 Contact
               </Link>
             </li>
@@ -84,7 +108,7 @@ const Navbar = () => {
               className="checkbox"
               id="checkbox"
               onChange={toggleTheme}
-              checked={theme === 'light'}
+              checked={theme === "light"}
             />
             <label for="checkbox" className="checkbox-label">
               <img src={sun} className="sun" alt="sun" />
@@ -98,22 +122,50 @@ const Navbar = () => {
         <div className="header__sm-menu-content">
           <ul className="header__sm-menu-links">
             <li className="header__sm-menu-link">
-              <Link to="home" smooth={true} className="header__link">
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={100}
+                onClick={toggleMenu}
+                className="header__link"
+              >
                 Home
               </Link>
             </li>
             <li className="header__sm-menu-link">
-              <Link to="about" smooth={true} className="header__link">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={100}
+                onClick={toggleMenu}
+                className="header__link"
+              >
                 About
               </Link>
             </li>
             <li className="header__sm-menu-link">
-              <Link to="projects" smooth={true} className="header__link">
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={100}
+                onClick={toggleMenu}
+                className="header__link"
+              >
                 Projects
               </Link>
             </li>
             <li className="header__sm-menu-link">
-              <Link to="contact" smooth={true} className="header__link">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={100}
+                onClick={toggleMenu}
+                className="header__link"
+              >
                 Contact
               </Link>
             </li>
@@ -123,14 +175,20 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={theme === 'light' ? LinkedinIconBlack : LinkedinIcon} alt="Linkedin Icon" />
+                <img
+                  src={theme === "light" ? LinkedinIconBlack : LinkedinIcon}
+                  alt="Linkedin Icon"
+                />
               </a>
               <a
                 href="https://github.com/TheCyberAtom"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={theme === 'light' ? GithubIconBlack : GithubIcon} alt="Github Icon" />
+                <img
+                  src={theme === "light" ? GithubIconBlack : GithubIcon}
+                  alt="Github Icon"
+                />
               </a>
             </li>
           </ul>
