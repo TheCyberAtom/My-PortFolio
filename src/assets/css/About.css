@@ -109,6 +109,11 @@
   .about__description p {
     font-size: 1.1rem;
   }
+  .about__cta a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+  }
 }
 
 @media (max-width: 655px) {

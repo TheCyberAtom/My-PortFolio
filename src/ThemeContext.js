@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }) => {
   // 24ad99 - good-color
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty('--primary-color', isDarkMode ? '#2E3AA1' : '#4285F4');
+    root.style.setProperty('--primary-color', isDarkMode ? '#3F96EC' : '#1E55AE');
     root.style.setProperty('--secondary-color', isDarkMode ? '#F7F7F7' : '#141824');
     root.style.setProperty('--background-color', isDarkMode ? '#0E0E0E' : '#FFFFFF');
     root.style.setProperty('--background-color-2', isDarkMode ? '#151515' : '#EFEFEF');
