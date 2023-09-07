@@ -49,7 +49,7 @@ const About = () => {
                 <a href="/">Read More. . .</a>
               </div>
               <div className="about__cta cta-secondary">
-                <a href="/resume.pdf" download="resume.pdf">
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   View Resume
                 </a>
               </div>
