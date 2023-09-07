@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import ProjectCard from "./ui/ProjectCard";
 import MarkdownProjectImg from "../assets/img/markdown_editor.png";
+import PasswordProjectImg from "../assets/img/password_generate.png";
 import HeroProjectIng from "../assets/img/hero_bg.jpeg";
 import "../assets/css/Projects.css";
 
@@ -20,7 +21,7 @@ const Projects = () => {
       id: 2,
       name: "Password Generator",
       description: "A website that offers a user-friendly interface for generating passwords according to user's preference.",
-      image: MarkdownProjectImg,
+      image: PasswordProjectImg,
       liveWebLink: "https://easy-generate-password.netlify.app/",
       sourceCodeLink: "https://github.com/TheCyberAtom/Password-Generator",
       tags: [],

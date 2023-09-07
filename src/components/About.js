@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImg from "../assets/img/hero_image.png";
+import { Link } from "react-router-dom";
 import "../assets/css/About.css";
 
 const About = () => {
@@ -46,7 +47,7 @@ const About = () => {
             </div>
             <div className="cta">
               <div className="about__cta primary">
-                <a href="/">Read More. . .</a>
+                <Link to="/about">Read More. . .</Link>
               </div>
               <div className="about__cta cta-secondary">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
