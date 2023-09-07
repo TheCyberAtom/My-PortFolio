@@ -61,6 +61,7 @@ body.menu-open {
 
 .header__link:hover {
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .header__main-ham-menu-cont {

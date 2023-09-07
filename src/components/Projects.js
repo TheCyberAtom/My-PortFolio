@@ -18,31 +18,22 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: "MarkDown Previewer",
-      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
-      image: HeroProjectIng,
-      liveWebLink: "https://livemarkdowneditor.netlify.app",
-      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
-      tags: [],
-    },
-    {
-      id: 3,
-      name: "MarkDown Previewer",
-      description: "A website that offers a user-friendly interface for creating and editing Markdown.A website that offers.",
+      name: "Password Generator",
+      description: "A website that offers a user-friendly interface for generating passwords according to user's preference.",
       image: MarkdownProjectImg,
-      liveWebLink: "https://livemarkdowneditor.netlify.app",
-      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+      liveWebLink: "https://easy-generate-password.netlify.app/",
+      sourceCodeLink: "https://github.com/TheCyberAtom/Password-Generator",
       tags: [],
     },
-    {
-      id: 4,
-      name: "MarkDown Previewer",
-      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
-      image: MarkdownProjectImg,
-      liveWebLink: "https://livemarkdowneditor.netlify.app",
-      sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
-      tags: [],
-    },
+    // {
+    //   id: 3,
+    //   name: "MarkDown Previewer",
+    //   description: "A website that offers a user-friendly interface for creating and editing Markdown.",
+    //   image: HeroProjectIng,
+    //   liveWebLink: "https://livemarkdowneditor.netlify.app",
+    //   sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
+    //   tags: [],
+    // },
   ];
 
   return (
@@ -57,11 +48,11 @@ const Projects = () => {
                 <ProjectCard key={project.id} project={project}/>
             ))}
         </div>
-        <div className="projects__cta">
+        {/* <div className="projects__cta">
           <Link to="contact" smooth={true} type="button">
             View All Projects
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
