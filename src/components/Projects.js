@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import ProjectCard from "./ui/ProjectCard";
 import MarkdownProjectImg from "../assets/img/markdown_editor.png";
 import PasswordProjectImg from "../assets/img/password_generate.png";
-import HeroProjectIng from "../assets/img/hero_bg.jpeg";
+// import HeroProjectIng from "../assets/img/hero_bg.jpeg";
 import "../assets/css/Projects.css";
 
 const Projects = () => {
