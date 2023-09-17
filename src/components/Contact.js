@@ -13,13 +13,12 @@ const Contact = () => {
   const [emailSent, setEmailSent] = useState(false);
 
   useEffect(() => {
-    // Animation for the contact form
     const contactTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".contact",
-        start: "top 50%", // Start the animation when the top of the contact section is 80% in view
-        end: "bottom center", // End the animation when the bottom of the contact section is at the center of the viewport
-        scrub: true, // Smoothly scrub through animation as you scroll
+        start: "top 70%",
+        end: "bottom bottom",
+        scrub: true,
       },
     });
 

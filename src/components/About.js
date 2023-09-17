@@ -14,7 +14,7 @@ const About = () => {
       scrollTrigger: {
         trigger: ".about__container",
         start: "top bottom", // Start the animation when the top of the container hits the center of the viewport
-        end: "bottom center", // End the animation when the bottom of the container hits the center of the viewport
+        end: "bottom bottom", // End the animation when the bottom of the container hits the center of the viewport
         scrub: true, // Smoothly scrub through animation as you scroll
       },
     });
@@ -33,7 +33,7 @@ const About = () => {
     gsap.to(".about__container", {
       scrollTrigger: {
         trigger: ".about__container",
-        start: "bottom center", // Start fading when the bottom of the container hits the center of the viewport
+        start: "bottom 20%", // Start fading when the bottom of the container hits the center of the viewport
         end: "bottom top", // End fading when the bottom of the container moves out of the viewport
         scrub: true, // Smoothly scrub through fading as you scroll
       },

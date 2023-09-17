@@ -26,8 +26,8 @@ const Footer = () => {
     const footerTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".footer",
-        start: "top 50%", // Start the animation when the top of the footer is 80% in view
-        end: "bottom center", // End the animation when the bottom of the footer is at the center of the viewport
+        start: "top 75%", // Start the animation when the top of the footer is 80% in view
+        end: "bottom bottom", // End the animation when the bottom of the footer is at the center of the viewport
         scrub: true, // Smoothly scrub through animation as you scroll
       },
     });
