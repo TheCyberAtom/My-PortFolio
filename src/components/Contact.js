@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "../assets/css/Contact.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
+
+  useEffect(() => {
+    // Animation for the contact form
+    const contactTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "top 50%", // Start the animation when the top of the contact section is 80% in view
+        end: "bottom center", // End the animation when the bottom of the contact section is at the center of the viewport
+        scrub: true, // Smoothly scrub through animation as you scroll
+      },
+    });
+
+    contactTl.from(".contact__title p", { y: 50, opacity: 0, duration: 0.5 });
+    contactTl.from(".name__email label, .name__email input, .textarea label, .textarea textarea", { y: 50, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.3");
+    contactTl.from(".submit__con", { opacity: 0, duration: 0.5 });
+  }, []);
 
   // const isValidEmail = email => {
   //     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -1,19 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroImg from "../assets/img/hero_image.png";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../assets/css/About.css";
 
 const About = () => {
-  // const handleDownload = () => {
-  //   // Generate the URL for your resume file
-  //   const resumeUrl = process.env.PUBLIC_URL + "/resume.pdf";
+  gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
 
-  //   const link = document.createElement("a");
-  //   link.href = resumeUrl;
-  //   link.target = "_blank";
-  //   link.download = "your-resume.pdf";
-  //   link.click();
-  // };
+  useEffect(() => {
+    // Animation for the About section
+    const aboutTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about__container",
+        start: "top bottom", // Start the animation when the top of the container hits the center of the viewport
+        end: "bottom center", // End the animation when the bottom of the container hits the center of the viewport
+        scrub: true, // Smoothly scrub through animation as you scroll
+      },
+    });
+
+    // Initially, make the image larger
+    aboutTl.from(".about__title", { x: -50, scale:1.25, opacity: 0, duration: 1 })
+    .from(".about__image img", { scale: 1.75, opacity: 0, duration: 2.0 }, "-=0.75")
+    .from(".about__description-left", {
+      x: -50,
+      opacity: 0,
+      duration: 2,
+    }, "-=1.5")
+    .from(".about__cta", { y: 50, opacity: 0, duration: 0.5 }, "-=1");
+
+    // Fade out the About section when scrolling out
+    gsap.to(".about__container", {
+      scrollTrigger: {
+        trigger: ".about__container",
+        start: "bottom center", // Start fading when the bottom of the container hits the center of the viewport
+        end: "bottom top", // End fading when the bottom of the container moves out of the viewport
+        scrub: true, // Smoothly scrub through fading as you scroll
+      },
+      opacity: 0,
+      duration: 1,
+    });
+  }, []);
 
   return (
     <div className="about">
@@ -50,7 +77,11 @@ const About = () => {
                 <Link to="/about">Read More. . .</Link>
               </div>
               <div className="about__cta cta-secondary">
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Resume
                 </a>
               </div>

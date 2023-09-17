@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-scroll";
 import HelloImg from "../assets/img/hello.png";
 import GithubIconBlack from "../assets/img/github_black.svg";
@@ -7,11 +7,34 @@ import GithubIcon from "../assets/img/github.svg";
 import LinkedinIcon from "../assets/img/linkedin.svg";
 import { useTheme } from '../ThemeContext';
 import "../assets/css/HeroSection.css";
+import gsap from 'gsap';
 
 const HeroSection = () => {
-
   const { theme } = useTheme();
-  console.log(theme);
+
+  const animateHeroSection = () => {
+    const timeline = gsap.timeline();
+    timeline.from('.hero__sub img', { opacity: 0, x: -30, duration: 0.6 })
+           .from('.hero__sub h3', { opacity: 0, x: -30, duration: 0.6 }, '-=0.3')
+           .from('.hero__title h1', { opacity: 0, y: -30, duration: 0.6 }, '-=0.3')
+           .from('.hero__description p', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3')
+           .from('.hero__cta a', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3')
+           .from('.socials__link a', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3');
+  };
+
+  useEffect(() => {
+    animateHeroSection();
+    gsap.to(".hero__container", {
+      scrollTrigger: {
+        trigger: ".hero__container",
+        start: "bottom bottom", // Start fading when the bottom of the container hits the center of the viewport
+        end: "bottom top", // End fading when the bottom of the container moves out of the viewport
+        scrub: true, // Smoothly scrub through fading as you scroll
+      },
+      opacity: 0,
+      duration: 1,
+    });
+  }, []);
 
   return (
     <div className="hero">

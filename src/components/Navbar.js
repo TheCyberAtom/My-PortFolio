@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { useTheme } from "../ThemeContext";
 import sun from "../assets/img/sun.png";
@@ -14,6 +14,7 @@ import LinkedinIcon from "../assets/img/linkedin.svg";
 import LinkedinIconBlack from "../assets/img/linkedin_black.svg";
 import GithubIconBlack from "../assets/img/github_black.svg";
 
+import { gsap } from "gsap";
 import "../assets/css/Navbar.css";
 
 const Navbar = () => {
@@ -27,6 +28,18 @@ const Navbar = () => {
   } else {
     document.body.classList.remove("menu-open");
   }
+
+  const navListRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ delay: 0.25 });
+    const navItems = navListRef.current.querySelectorAll(".header__link-wrapper");
+    navItems.forEach((item, index) => {
+      tl.from(item, { opacity: 0, duration: 0.25 }, `+=${index * 0.1}`);
+    });
+
+    tl.play();
+  }, []);
 
   return (
     <header className="header">
@@ -42,7 +55,7 @@ const Navbar = () => {
           <span className="header__logo-title">Rahul Mishra</span>
         </div>
         <div className="header__main">
-          <ul className="header__links">
+          <ul className="header__links" ref={navListRef}>
             <li className="header__link-wrapper">
               <Link
                 to="home"
