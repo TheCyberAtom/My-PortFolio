@@ -18,6 +18,7 @@ const ProjectCard = ({ project }) => {
           <div className="project__card-links">
             <a
               href={project.liveWebLink}
+              aria-label="Project live demo"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -25,6 +26,7 @@ const ProjectCard = ({ project }) => {
             </a>
             <a
               href={project.sourceCodeLink}
+              aria-label="project case study"
               target="_blank"
               rel="noopener noreferrer"
             >

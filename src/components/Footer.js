@@ -65,6 +65,7 @@ const Footer = () => {
             <div className="social__link">
               <a
                 href="https://www.linkedin.com/in/thecyberatom/"
+                aria-label="linkedin profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -72,6 +73,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://github.com/TheCyberAtom"
+                aria-label="github profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >

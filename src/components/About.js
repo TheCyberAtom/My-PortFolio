@@ -86,7 +86,7 @@ const About = () => {
                 <Link to="/about">Read More. . .</Link>
               </div>
               <div className="about__cta cta-secondary">
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/resume.pdf" target="_blank" aria-label="Resume" rel="noopener noreferrer">
                   View Resume
                 </a>
               </div>
