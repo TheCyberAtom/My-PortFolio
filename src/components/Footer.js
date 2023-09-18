@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import GithubIcon from "../assets/img/github.svg";
-import LinkedinIcon from "../assets/img/linkedin.svg";
+import GithubIcon from "../assets/webp_img/github.svg";
+import LinkedinIcon from "../assets/webp_img/linkedin.svg";
 import "../assets/css/Footer.css";
 import Contact from "./Contact";
 import { gsap } from "gsap";
@@ -32,8 +32,17 @@ const Footer = () => {
       },
     });
 
-    footerTl.from(".word span", { y: 50, opacity: 0, duration: 0.5, stagger: 0.1 });
-    footerTl.from(".social__link a", { y: 50, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.3");
+    footerTl.from(".word span", {
+      y: 50,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1,
+    });
+    footerTl.from(
+      ".social__link a",
+      { y: 50, opacity: 0, duration: 0.5, stagger: 0.1 },
+      "-=0.3"
+    );
   }, []);
 
   return (
@@ -45,11 +54,9 @@ const Footer = () => {
               {Array.from("RAHUL").map((letter, idx) => (
                 <span
                   key={idx}
-                  className={`${
-                    activeIndex === idx ? "active" : ""
-                  }`}
-                  onMouseEnter={() => handleHover(idx)} 
-                  onAnimationEnd={handleAnimationEnd} 
+                  className={`${activeIndex === idx ? "active" : ""}`}
+                  onMouseEnter={() => handleHover(idx)}
+                  onAnimationEnd={handleAnimationEnd}
                 >
                   {letter}
                 </span>

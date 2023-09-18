@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeroImg from "../assets/img/hero_image.png";
+import HeroImg from "../assets/webp_img/hero_image.webp";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,14 +20,23 @@ const About = () => {
     });
 
     // Initially, make the image larger
-    aboutTl.from(".about__title", { x: -50, scale:1.25, opacity: 0, duration: 1 })
-    .from(".about__image img", { scale: 1.75, opacity: 0, duration: 2.0 }, "-=0.75")
-    .from(".about__description-left", {
-      x: -50,
-      opacity: 0,
-      duration: 2,
-    }, "-=1.5")
-    .from(".about__cta", { y: 50, opacity: 0, duration: 0.5 }, "-=1");
+    aboutTl
+      .from(".about__title", { x: -50, scale: 1.25, opacity: 0, duration: 1 })
+      .from(
+        ".about__image img",
+        { scale: 1.75, opacity: 0, duration: 2.0 },
+        "-=0.75"
+      )
+      .from(
+        ".about__description-left",
+        {
+          x: -50,
+          opacity: 0,
+          duration: 2,
+        },
+        "-=1.5"
+      )
+      .from(".about__cta", { y: 50, opacity: 0, duration: 0.5 }, "-=1");
 
     // Fade out the About section when scrolling out
     gsap.to(".about__container", {
@@ -77,11 +86,7 @@ const About = () => {
                 <Link to="/about">Read More. . .</Link>
               </div>
               <div className="about__cta cta-secondary">
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   View Resume
                 </a>
               </div>

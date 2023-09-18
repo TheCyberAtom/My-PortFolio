@@ -1,9 +1,9 @@
 import React from "react";
 // import { Link } from "react-scroll";
 import ProjectCard from "./ui/ProjectCard";
-import MarkdownProjectImg from "../assets/img/markdown_editor.png";
-import PasswordProjectImg from "../assets/img/password_generate.png";
-// import HeroProjectIng from "../assets/img/hero_bg.jpeg";
+import MarkdownProjectImg from "../assets/webp_img/markdown_editor.webp";
+import PasswordProjectImg from "../assets/webp_img/password_generate.webp";
+// import HeroProjectIng from "../assets/webp_img/hero_bg.jpeg";
 import "../assets/css/Projects.css";
 
 const Projects = () => {
@@ -11,7 +11,8 @@ const Projects = () => {
     {
       id: 1,
       name: "MarkDown Previewer",
-      description: "A website that offers a user-friendly interface for creating and editing Markdown.",
+      description:
+        "A website that offers a user-friendly interface for creating and editing Markdown.",
       image: MarkdownProjectImg,
       liveWebLink: "https://livemarkdowneditor.netlify.app",
       sourceCodeLink: "https://github.com/TheCyberAtom/Markdown-Editor",
@@ -20,7 +21,8 @@ const Projects = () => {
     {
       id: 2,
       name: "Password Generator",
-      description: "A website that offers a user-friendly interface for generating passwords according to user's preference.",
+      description:
+        "A website that offers a user-friendly interface for generating passwords according to user's preference.",
       image: PasswordProjectImg,
       liveWebLink: "https://easy-generate-password.netlify.app/",
       sourceCodeLink: "https://github.com/TheCyberAtom/Password-Generator",
@@ -41,13 +43,13 @@ const Projects = () => {
     <div className="projects">
       <div className="projects__container">
         <div className="projects__title">
-            <span>PROJECTS</span>
-            <h2>Code-Powered Designs in Action</h2>
+          <span>PROJECTS</span>
+          <h2>Code-Powered Designs in Action</h2>
         </div>
         <div className="projects__lists">
-            {ProjectsData.map((project) => (
-                <ProjectCard key={project.id} project={project}/>
-            ))}
+          {ProjectsData.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
         {/* <div className="projects__cta">
           <Link to="contact" smooth={true} type="button">

@@ -1,25 +1,30 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import HelloImg from "../assets/img/hello.png";
-import GithubIconBlack from "../assets/img/github_black.svg";
-import LinkedinIconBlack from "../assets/img/linkedin_black.svg";
-import GithubIcon from "../assets/img/github.svg";
-import LinkedinIcon from "../assets/img/linkedin.svg";
-import { useTheme } from '../ThemeContext';
+import HelloImg from "../assets/webp_img/hello.webp";
+import GithubIconBlack from "../assets/webp_img/github_black.svg";
+import LinkedinIconBlack from "../assets/webp_img/linkedin_black.svg";
+import GithubIcon from "../assets/webp_img/github.svg";
+import LinkedinIcon from "../assets/webp_img/linkedin.svg";
+import { useTheme } from "../ThemeContext";
 import "../assets/css/HeroSection.css";
-import gsap from 'gsap';
+import gsap from "gsap";
 
 const HeroSection = () => {
   const { theme } = useTheme();
 
   const animateHeroSection = () => {
     const timeline = gsap.timeline();
-    timeline.from('.hero__sub img', { opacity: 0, x: -30, duration: 0.6 })
-           .from('.hero__sub h3', { opacity: 0, x: -30, duration: 0.6 }, '-=0.3')
-           .from('.hero__title h1', { opacity: 0, y: -30, duration: 0.6 }, '-=0.3')
-           .from('.hero__description p', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3')
-           .from('.hero__cta a', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3')
-           .from('.socials__link a', { opacity: 0, y: 30, duration: 0.6 }, '-=0.3');
+    timeline
+      .from(".hero__sub img", { opacity: 0, x: -30, duration: 0.6 })
+      .from(".hero__sub h3", { opacity: 0, x: -30, duration: 0.6 }, "-=0.3")
+      .from(".hero__title h1", { opacity: 0, y: -30, duration: 0.6 }, "-=0.3")
+      .from(
+        ".hero__description p",
+        { opacity: 0, y: 30, duration: 0.6 },
+        "-=0.3"
+      )
+      .from(".hero__cta a", { opacity: 0, y: 30, duration: 0.6 }, "-=0.3")
+      .from(".socials__link a", { opacity: 0, y: 30, duration: 0.6 }, "-=0.3");
   };
 
   useEffect(() => {
@@ -56,7 +61,13 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="hero__cta">
-          <Link to="contact" spy={true} smooth={true} duration={100} type="button">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={100}
+            type="button"
+          >
             Contact Me
           </Link>
         </div>
@@ -69,7 +80,10 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="linkedin"
           >
-            <img src={theme === 'light' ? LinkedinIconBlack : LinkedinIcon} alt="Linkedin Icon" />
+            <img
+              src={theme === "light" ? LinkedinIconBlack : LinkedinIcon}
+              alt="Linkedin Icon"
+            />
           </a>
           <a
             href="https://github.com/TheCyberAtom"
@@ -77,7 +91,10 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="github"
           >
-            <img src={theme === 'light' ? GithubIconBlack : GithubIcon} alt="Github Icon" />
+            <img
+              src={theme === "light" ? GithubIconBlack : GithubIcon}
+              alt="Github Icon"
+            />
           </a>
         </div>
       </div>

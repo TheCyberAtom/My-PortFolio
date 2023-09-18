@@ -1,18 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { useTheme } from "../ThemeContext";
-import sun from "../assets/img/sun.png";
-import MenuOpen from "../assets/img/menu.png";
-import moon from "../assets/img/half-moon.png";
-import MenuClose from "../assets/img/close.png";
-import WhiteLogo from "../assets/img/logo_white.svg";
-import BlackLogo from "../assets/img/logo_black.svg";
-import GithubIcon from "../assets/img/github.svg";
-import MenuOpenWhite from "../assets/img/white_menu.png";
-import MenuCloseWhite from "../assets/img/close_white.png";
-import LinkedinIcon from "../assets/img/linkedin.svg";
-import LinkedinIconBlack from "../assets/img/linkedin_black.svg";
-import GithubIconBlack from "../assets/img/github_black.svg";
+import sun from "../assets/webp_img/sun.webp";
+import MenuOpen from "../assets/webp_img/menu.webp";
+import moon from "../assets/webp_img/half-moon.webp";
+import MenuClose from "../assets/webp_img/close.webp";
+import WhiteLogo from "../assets/webp_img/logo_white.svg";
+import BlackLogo from "../assets/webp_img/logo_black.svg";
+import GithubIcon from "../assets/webp_img/github.svg";
+import MenuOpenWhite from "../assets/webp_img/white_menu.webp";
+import MenuCloseWhite from "../assets/webp_img/close_white.webp";
+import LinkedinIcon from "../assets/webp_img/linkedin.svg";
+import LinkedinIconBlack from "../assets/webp_img/linkedin_black.svg";
+import GithubIconBlack from "../assets/webp_img/github_black.svg";
 
 import { gsap } from "gsap";
 import "../assets/css/Navbar.css";
@@ -33,7 +33,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.25 });
-    const navItems = navListRef.current.querySelectorAll(".header__link-wrapper");
+    const navItems = navListRef.current.querySelectorAll(
+      ".header__link-wrapper"
+    );
     navItems.forEach((item, index) => {
       tl.from(item, { opacity: 0, duration: 0.25 }, `+=${index * 0.1}`);
     });
