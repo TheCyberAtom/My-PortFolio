@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import HelloImg from "../assets/webp_img/hello.webp";
-import GithubIconBlack from "../assets/webp_img/github_black.svg";
-import LinkedinIconBlack from "../assets/webp_img/linkedin_black.svg";
-import GithubIcon from "../assets/webp_img/github.svg";
-import LinkedinIcon from "../assets/webp_img/linkedin.svg";
+import HelloImg from "../assets/img/hello.png";
+import GithubIconBlack from "../assets/img/github_black.svg";
+import LinkedinIconBlack from "../assets/img/linkedin_black.svg";
+import GithubIcon from "../assets/img/github.svg";
+import LinkedinIcon from "../assets/img/linkedin.svg";
 import { useTheme } from "../ThemeContext";
 import "../assets/css/HeroSection.css";
 import gsap from "gsap";

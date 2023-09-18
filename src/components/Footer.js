@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import GithubIcon from "../assets/webp_img/github.svg";
-import LinkedinIcon from "../assets/webp_img/linkedin.svg";
+import GithubIcon from "../assets/img/github.svg";
+import LinkedinIcon from "../assets/img/linkedin.svg";
 import "../assets/css/Footer.css";
 import Contact from "./Contact";
 import { gsap } from "gsap";

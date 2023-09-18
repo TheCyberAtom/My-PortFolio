@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeroImg from "../assets/webp_img/hero_image.webp";
+import HeroImg from "../assets/img/hero_image.png";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
